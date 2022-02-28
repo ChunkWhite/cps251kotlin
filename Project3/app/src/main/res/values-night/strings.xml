@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="enter_bill_total">Enter Bill Total</string>
-    <string name="txView">TextView</string>
+    <string name="txtView">Tip amounts will display here</string>
 </resources>

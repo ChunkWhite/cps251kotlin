@@ -1,6 +1,7 @@
 package com.example.tipcalculator
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.tipcalculator.databinding.ActivityMainBinding
 
@@ -13,12 +14,8 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        binding.tipBtn.setOnClickListener {
-            calculateTip()
-        }
     }
-    fun calculateTip() {
+    fun calculateTip(view:View) {
         if (binding.billAmount.text.isNotEmpty()) {
             val dollarValue = binding.billAmount.text.toString()
             val amt = dollarValue.toDouble()
