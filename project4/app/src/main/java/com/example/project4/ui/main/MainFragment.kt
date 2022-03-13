@@ -23,7 +23,7 @@ class MainFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
+    ): View? {
         _binding = MainFragmentBinding.inflate(inflater, container, false);
         return binding.root
     }
@@ -37,12 +37,13 @@ class MainFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
         // TODO: Use the ViewModel
-        binding.displayNames.text = viewModel.getName().toString()
+        binding.displayNames.text = viewModel.getName()
 
         binding.button.setOnClickListener {
         if (binding.editTextName.text.isNotEmpty()) {
             viewModel.setName(binding.editTextName.text.toString())
-            binding.displayNames.text = viewModel.getName().toString()
+            viewModel.getName().also { binding.displayNames.text = it }
+
         } else {
             binding.displayNames.text = "No Value"
         }

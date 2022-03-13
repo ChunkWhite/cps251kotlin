@@ -2,5 +2,5 @@
     <string name="app_name">project4</string>
     <string name="enter_name">Enter Name</string>
     <string name="addNamebtn">Add Name</string>
-    <string name="names_list">Names List</string>
+    <string name="names_list">No names to display</string>
 </resources>

@@ -11,22 +11,24 @@
         android:id="@+id/editTextName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="24dp"
+        android:autofillHints=""
         android:ems="10"
+        android:hint="@string/enter_name"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        android:text="@string/enter_name"
+        android:textColorHint="#757575"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.427"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="" />
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="16dp"
         android:text="@string/addNamebtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.446"
@@ -37,12 +39,13 @@
         android:id="@+id/displayNames"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:hint="@string/names_list"
         android:text="@string/names_list"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button"
-        app:layout_constraintVertical_bias="0.166" />
+        app:layout_constraintVertical_bias="0.129" />
 </androidx.constraintlayout.widget.ConstraintLayout>
